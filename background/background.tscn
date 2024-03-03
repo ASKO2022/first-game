@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://dtcktt7cgsc1y"]
+
+[ext_resource type="Texture2D" uid="uid://cacxdtoxpe4ya" path="res://oak_woods_v1.0/background/background_layer_1.png" id="1_qj3xn"]
+[ext_resource type="Texture2D" uid="uid://dcls6caludbro" path="res://oak_woods_v1.0/background/background_layer_2.png" id="2_8m4ev"]
+[ext_resource type="Texture2D" uid="uid://djvob6df1xbbe" path="res://oak_woods_v1.0/background/background_layer_3.png" id="3_a1rto"]
+
+[sub_resource type="GDScript" id="GDScript_oxdma"]
+script/source = "extends ParallaxBackground
+
+
+var speed = 100;
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	scroll_offset.x -= speed * delta;
+"
+
+[node name="Background" type="ParallaxBackground"]
+script = SubResource("GDScript_oxdma")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+rotation = 0.00092887
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(1152, 2.08165e-12)
+
+[node name="BackgroundLayer1" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(576, 324)
+scale = Vector2(3.6, 3.6)
+texture = ExtResource("1_qj3xn")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(1152, 2.08165e-12)
+
+[node name="BackgroundLayer2" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(576, 324)
+scale = Vector2(3.6, 3.6)
+texture = ExtResource("2_8m4ev")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1152, 2.08165e-12)
+
+[node name="BackgroundLayer3" type="Sprite2D" parent="ParallaxLayer3"]
+position = Vector2(576, 324)
+scale = Vector2(3.6, 3.6)
+texture = ExtResource("3_a1rto")
