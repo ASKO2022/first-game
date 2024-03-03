@@ -1,0 +1,48 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddq2m6knexi5t"]
+
+[ext_resource type="Script" path="res://Levels/levels.gd" id="1_vysbk"]
+
+[node name="Levels" type="Node2D"]
+script = ExtResource("1_vysbk")
+
+[node name="Level1" type="Button" parent="."]
+offset_left = 431.0
+offset_top = 29.0
+offset_right = 783.0
+offset_bottom = 130.0
+theme_override_font_sizes/font_size = 30
+text = "Level 1"
+
+[node name="Level2" type="Button" parent="."]
+offset_left = 429.0
+offset_top = 143.0
+offset_right = 781.0
+offset_bottom = 244.0
+theme_override_font_sizes/font_size = 30
+text = "Level 2"
+
+[node name="Level3" type="Button" parent="."]
+offset_left = 429.0
+offset_top = 256.0
+offset_right = 781.0
+offset_bottom = 357.0
+theme_override_font_sizes/font_size = 30
+text = "Level 3"
+
+[node name="Level4" type="Button" parent="."]
+offset_left = 429.0
+offset_top = 367.0
+offset_right = 781.0
+offset_bottom = 468.0
+theme_override_font_sizes/font_size = 30
+text = "Level 4"
+
+[node name="Level5" type="Button" parent="."]
+offset_left = 429.0
+offset_top = 480.0
+offset_right = 781.0
+offset_bottom = 581.0
+theme_override_font_sizes/font_size = 30
+text = "Level 5"
+
+[connection signal="pressed" from="Level1" to="." method="_on_level_1_pressed"]
